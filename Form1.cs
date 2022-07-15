@@ -796,11 +796,18 @@ namespace Calculator
             Button myButton = (Button)sender;
             switch (myButton.Name)
             {
-                case "button21": case "button23":
+                /*case "button21": //Standard
+                    Program.calcType = Program.CalculatorType.Standard
                     DialogResult = DialogResult.Retry;
+                    break;*/
+                case "button23": //Scientific
+                    ProgramHandler.calcType = ProgramHandler.CalculatorType.Scientific;
+                    DialogResult = DialogResult.Retry;
+                    Close();
                     break;
-                case "button24": //settings
+                case "button24": //Settings
                     DialogResult = DialogResult.Ignore;
+                    Close();
                     break;
             }
         }

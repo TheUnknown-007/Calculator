@@ -69,7 +69,6 @@ namespace Calculator
             richTextBox1.BackColor = Color.FromArgb(9, 24, 51);
             richTextBox1.ForeColor = Color.FromArgb(0, 235, 100);
             PanelSlide.BackColor = Color.FromArgb(14, 35, 75);
-            //PanelSlide.
 
             button1.BackColor  = Color.FromArgb(9, 24, 51);
             button2.BackColor  = Color.FromArgb(9, 24, 51);
@@ -116,9 +115,9 @@ namespace Calculator
             button18.ForeColor = Color.FromArgb(0, 235, 100);
             button19.ForeColor = Color.FromArgb(0, 235, 100);
             button20.ForeColor = Color.FromArgb(0, 235, 100);
-            button21.ForeColor = Color.FromArgb(234, 0, 217);
+            button21.ForeColor = Color.FromArgb(0, 235, 100);
             button22.ForeColor = Color.FromArgb(0, 235, 100);
-            button23.ForeColor = Color.FromArgb(0, 235, 100);
+            button23.ForeColor = Color.FromArgb(234, 0, 217);
             button24.ForeColor = Color.FromArgb(0, 235, 100);
 
 
@@ -797,6 +796,27 @@ namespace Calculator
         {
             if(Hidden) timer1.Start();
             else timer2.Start();
+        }
+
+        private void panelButtons_Click(object sender, EventArgs e)
+        {
+            Button myButton = (Button)sender;
+            switch (myButton.Name)
+            {
+                case "button21": //Standard
+                    ProgramHandler.calcType = ProgramHandler.CalculatorType.Standard;
+                    DialogResult = DialogResult.Retry;
+                    break;
+                /*(case "button23": //Scientific
+                    ProgramHandler.calcType = ProgramHandler.CalculatorType.Scientific;
+                    DialogResult = DialogResult.Retry;
+                    Close();
+                    break;*/
+                case "button24": //Settings
+                    DialogResult = DialogResult.Ignore;
+                    Close();
+                    break;
+            }
         }
     }
 }

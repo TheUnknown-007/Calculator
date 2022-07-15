@@ -364,6 +364,9 @@ namespace Calculator
             this.button21.Text = "Standard";
             this.button21.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button21.UseVisualStyleBackColor = true;
+            this.button21.Click += new System.EventHandler(this.panelButtons_Click);
+            this.button21.MouseDown += new System.Windows.Forms.MouseEventHandler(this.mouseDown);
+            this.button21.MouseUp += new System.Windows.Forms.MouseEventHandler(this.mouseUp);
             // 
             // button23
             // 
@@ -379,8 +382,6 @@ namespace Calculator
             this.button23.Text = "Scientific";
             this.button23.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button23.UseVisualStyleBackColor = true;
-            this.button23.MouseDown += new System.Windows.Forms.MouseEventHandler(this.mouseDown);
-            this.button23.MouseUp += new System.Windows.Forms.MouseEventHandler(this.mouseUp);
             // 
             // button24
             // 
