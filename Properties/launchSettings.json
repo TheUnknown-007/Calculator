@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "Calculator": {
+      "commandName": "Project",
+      "workingDirectory": "D:\\Dangerous Folder\\Test C# Scripts\\Calculator\\Calculator\\bin\\Debug\\net48"
+    }
+  }
+}
